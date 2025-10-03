@@ -1,42 +1,434 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-    <!-- SEO y Metadatos -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portal oficial de eventos UTP - Universidad Tecnológica de Panamá">
-    <meta name="keywords" content="UTP, eventos, universidad, Panamá, estudiantes">
-    <meta name="author" content="Jhezrrel Delgado">
-    <!-- - **Open Graph** para redes sociales: -->
-     <meta property="og:title" content="Eventos UTP">
-    <meta property="og:description" content="Descubre los próximos eventos en la UTP">
-    <meta property="og:image" content="logo-utp.png">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-                <nav>
-                    <ul>
-                        <li class="logo"><a href="#20"><img src="https://bit.ly/4gHwivF" alt="logo-utp" width="70px"></a></li>
-                        <li><a href="">Academicos</a></li>
-                        <li><a href="">Deportivos</a></li>
-                        <li><a href="">Culturales</a></li>
-                        <li><a href="">Inscribete!</a></li>
-                        <li><a href="https://utp.ac.pa/">Web Principal</a></li>
-                    </ul>
-                </nav>
-    </header>
-    <main>
-        <section id="Multimedia">
-            <video controls autoplay muted>
-                <source src="/Multimedia/Celebran en la UTP la VII Feria de Turismo - UTPPanama (1080p, h264).mp4">
-            </video>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eventos UTP — Portal Oficial</title>
 
-            <audio src="/Multimedia/Patria (Motherland) - Rubén Blades.mp3">
-            </audio>
+  <!-- SEO / Metadatos -->
+  <meta name="description" content="Portal oficial de eventos UTP - Universidad Tecnológica de Panamá">
+  <meta name="keywords" content="UTP, eventos, universidad, Panamá, estudiantes">
+  <meta name="author" content="Tu Nombre">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eventos UTP">
+  <meta property="og:description" content="Descubre los próximos eventos en la UTP">
+  <meta property="og:image" content="assets/logo-utp.png"> 
+
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="container" role="main">
+    <!-- HEADER -->
+    <header>
+      <div class="brand" aria-label="Marca UTP">
+        <div class="logo" role="img" aria-label="Logo UTP">
+            <img src="assets/logo-utp.png" width="64px" height="64px">
+        </div>
+        <div>
+          <h1>Portal de Eventos UTP</h1>
+          <p>Tu conexión con la vida universitaria</p>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="#explorar">Explorar</a>
+        <a href="#registro">Registrarse</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto" class="cta">Contacto</a>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <main>
+
+        <section class="card hero" aria-labelledby="hero-title">
+          <div style="flex:1">
+            <h2 id="hero-title">Evento destacado — VII Feria de Turismo</h2>
+            <figure class="media" aria-label="Video promocional del último evento">
+              <div class="video-wrap" aria-hidden="false">
+                <video controls crossorigin playsinline aria-describedby="video-desc">
+                  <source src="assets/Celebran en la UTP la VII Feria de Turismo - UTPPanama (1080p, h264).mp4" type="video/mp4">
+                </video>
+              </div>
+              <figcaption id="video-desc">Luego de tres años de pandemia, en el Vestíbulo del Edif. No.3 de la Universidad Tecnológica de Panamá, se celebró la VII Feria de Turismo, organizada por los estudiantes de I.er año de la Licenciatura de Comunicación Ejecutiva Bilingüe, de la Facultad de Ciencias y Tecnología (FCyT), el 15 de junio.</figcaption>
+            </figure>
+          </div>
+
+          <aside class="side" aria-label="Controles y mapa">
+            <div class="card audio-mini" role="region" aria-label="Audio himno">
+              <div style="min-width:60px; display:flex;align-items:center;justify-content:center;">
+                <div style="width:48px;height:48px;border-radius:8px;background-image:var(--utp-image);background-size:cover;"></div>
+              </div>
+              <div style="flex:1;">
+                <strong>Escucha — "Patria" (Rubén Blades)</strong>
+                <audio controls preload="metadata" aria-label="Audio himno patria">
+                  <source src="assets/Patria (Motherland) - Rubén Blades.mp3" type="audio/mp3">
+                </audio>
+                </div>
+            </div>
+
+            <div class="card map" role="region" aria-label="Ubicación del campus">
+              <iframe
+                title="Ubicación del campus principal UTP"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126122.22369330304!2d-79.74980636783975!3d8.942678383222026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca83beefa4541%3A0x66a3755d549585b5!2sUniversidad%20Tecnol%C3%B3gica%20de%20Panam%C3%A1!5e0!3m2!1ses-419!2sus!4v1759527193378!5m2!1ses-419!2sus" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+
+          </aside>
         </section>
 
-    </main>
+        <section id="explorar" class="card">
+          <h2>Explora nuestros eventos por categoría</h2>
+          <div class="categories">
+            <!-- ACADEMICOS -->
+            <div class="category">
+              <h3>Académicos</h3>
+              <div class="events-list" role="list">
+                <!-- Evento 1 -->
+                <article class="event" role="listitem" aria-labelledby="e1">
+                  <div class="thumb" aria-hidden="true">
+                    <img src="https://panoramaeconomicopma.com/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-26-at-5.40.36-PM-1024x576.jpeg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e1">Jornada de Investigación UTP</h3>
+                    <div class="meta">23/10/2025 | 09:00 AM | Auditorio Principal</div>
+                    <p>Presentación de proyectos de investigación de vanguardia por estudiantes y grupos de investigación.</p>
+
+                    <!-- progress y meter -->
+                    <div class="progress-wrap" style="margin-top:8px;">
+                      <progress value="75" max="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">75%</progress>
+                      <div class="meter">75% cupos ocupados</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Evento 2 -->
+                <article class="event" role="listitem" aria-labelledby="e2">
+                  <div class="thumb" aria-hidden="true">
+                    <img src="https://utp.ac.pa/sites/default/files/feriaemprendimientofim1.jpg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e2">Feria de Emprendimiento</h3>
+                    <div class="meta">15/10/2025 | 10:00 AM | Plaza de la Creatividad</div>
+                    <p>Conoce las startups de nuestros estudiantes y egresados, talleres y charlas.</p>
+
+                    <div class="progress-wrap" style="margin-top:8px;">
+                      <progress value="40" max="100" aria-valuenow="40">40%</progress>
+                      <div class="meter">40% cupos ocupados</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Evento 3 -->
+                <article class="event" role="listitem" aria-labelledby="e3">
+                  <div class="thumb" aria-hidden="true">
+                    <img src="https://utp.ac.pa/sites/default/files/Hexapod_robot_Hector%204.jpg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e3">Concurso de Robótica</h3>
+                    <div class="meta">20/10/2025 | 08:00 AM | Laboratorios de Ingeniería</div>
+                    <p>Desafío de ingenio y tecnología entre equipos de distintas facultades.</p>
+
+                    <div class="progress-wrap" style="margin-top:8px;">
+                      <progress value="90" max="100" aria-valuenow="90">90%</progress>
+                      <div class="meter">Casi lleno — 90%</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+            <!-- DEPORTIVOS -->
+            <div class="category">
+              <h3>Deportivos</h3>
+              <div class="events-list">
+                <!-- Evento 4 -->
+                <article class="event" role="article" aria-labelledby="e4">
+                  <div class="thumb">
+                    <img src="https://utp.ac.pa/sites/default/files/IMG_9346.JPG" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e4">Torneo Interfacultades - Baloncesto</h3>
+                    <div class="meta">05/10/2025 | 02:00 PM | Gimnasio UTP</div>
+                    <p>Torneos entre facultades, clasificatorio regional.</p>
+
+                    <div class="progress-wrap" style="margin-top:8px;">
+                      <progress value="85" max="100" aria-valuenow="85">85%</progress>
+                      <div class="meter">85% cupos ocupados</div>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Evento 5 -->
+                <article class="event" aria-labelledby="e5">
+                  <div class="thumb">
+                    <img src="https://utp.ac.pa/sites/default/files/mediamaraton1.jpg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e5">Maratón Solidario UTP</h3>
+                    <div class="meta">24/10/2025 | 07:00 AM | Campus Principal</div>
+                    <p>Carrera recreativa que apoya iniciativas comunitarias de la universidad.</p>
+
+                    <div class="progress-wrap" style="margin-top:8px;">
+                      <progress value="30" max="100" aria-valuenow="30">30%</progress>
+                      <div class="meter">30% cupos ocupados</div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- CULTURALES -->
+            <div class="category">
+              <h3>Culturales</h3>
+              <div class="events-list">
+                <article class="event" aria-labelledby="e6">
+                  <div class="thumb">
+                    <img src="https://utp.ac.pa/sites/default/files/gala-utp-8.jpg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e6">Festival Cultural Universitario</h3>
+                    <div class="meta">01/11/2025 | 06:00 PM | Teatro Universitario</div>
+                    <p>Música, danza y arte de la comunidad UTP.</p>
+
+                    <div class="meter-wrap" style="margin-top:8px;">
+                      <meter value="8.5" min="0" max="10" aria-valuenow="8.5">8.5/10</meter>
+                      <div class="meter">8.5/10 popularidad</div>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="event" aria-labelledby="e7">
+                  <div class="thumb">
+                    <img src="https://utp.ac.pa/sites/default/files/expo-arte-utpch-01.jpg" width="140px" height="90px" alt="">
+                  </div>
+                  <div>
+                    <h3 id="e7">Exposición de Arte Universitario</h3>
+                    <div class="meta">22/10/2025 | 05:00 PM | Galería Central</div>
+                    <p>Artistas emergentes de la UTP presentan sus trabajos.</p>
+
+                    <div class="meter-wrap" style="margin-top:8px;">
+                      <meter value="7" min="0" max="10" aria-valuenow="7">7/10</meter>
+                      <div class="meter">7.0 de 10 estrellas</div>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="card" aria-label="Galería de momentos">
+          <h2>Galería de momentos UTP</h2>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;">
+            <figure style="width:calc(33% - 6px);min-width:180px" class="card" aria-label="foto evento">
+              <img src="https://utp.ac.pa/sites/default/files/1718915977749.jpg" alt="Momentos de la feria" style="width:100%;height:140px;object-fit:cover;border-radius:8px">
+              <figcaption style="padding-top:8px;color:var(--muted)">Revive la VII Feria de Turismo — foto destacada.</figcaption>
+            </figure>
+
+            <figure style="width:calc(33% - 6px);min-width:180px" class="card">
+              <img src="https://utp.ac.pa/sites/default/files/doctorado_editada.jpg" alt="Graduación UTP" style="width:100%;height:140px;object-fit:cover;border-radius:8px">
+              <figcaption style="padding-top:8px;color:var(--muted)">Ceremonia de Graduación — celebraremos juntos.</figcaption>
+            </figure>
+
+            <figure style="width:calc(33% - 6px);min-width:180px" class="card">
+              <img src="https://utp.ac.pa/sites/default/files/homnoutp-bandarepublicaba7.jpg" alt="Concierto UTP" style="width:100%;height:140px;object-fit:cover;border-radius:8px">
+              <figcaption style="padding-top:8px;color:var(--muted)">Concierto estudiantil — momentos inolvidables.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section id="registro" class="card" aria-label="Formulario de registro">
+          <h2>Inscríbete a nuestros eventos</h2>
+          <p style="color:var(--muted);font-size:13px;margin-top:6px">Los campos marcados con * son obligatorios. Este formulario está preparado para validación HTML5 — integra tu backend o JS para hacerlo funcional.</p>
+
+         
+          <form novalidate aria-label="Formulario de registro">
+            <fieldset>
+              <legend>Información Personal</legend>
+              <div class="form-grid">
+                <div>
+                  <label for="nombre">Nombre completo *</label>
+                  <input id="nombre" name="nombre" type="text" placeholder="Ej. Ana Pérez" required>
+                </div>
+
+                <div>
+                  <label for="cedula">Cédula (Panamá) *</label>
+                  <!-- formato 00-000-0000 o 00-0000-0000 -->
+                  <input id="cedula" name="cedula" type="text" placeholder="12-345-6789" pattern="^\d{2}-\d{3,4}-\d{4}$" required aria-describedby="cedulaHelp">
+                  <div id="cedulaHelp" style="font-size:12px;color:var(--muted)">Formato: 00-000-0000 o 00-0000-0000</div>
+                </div>
+
+                <div>
+                  <label for="email">Correo institucional *</label>
+                  <input id="email" name="email" type="email" placeholder="usuario@utp.edu.pa" required>
+                </div>
+
+                <div>
+                  <label for="telefono">Teléfono</label>
+                  <input id="telefono" name="telefono" type="tel" placeholder="+507 6XX-XXXX">
+                </div>
+
+                <div>
+                  <label for="nacimiento">Fecha de nacimiento *</label>
+                  <input id="nacimiento" name="nacimiento" type="date" required min="1900-01-01" max="2008-12-31">
+                </div>
+
+                <div>
+                  <label for="hora">Hora preferida</label>
+                  <input id="hora" name="hora" type="time">
+                </div>
+
+                <div>
+                  <label for="color">Color favorito</label>
+                  <input id="color" name="color" type="color" value="#0058a3">
+                </div>
+
+                <div>
+                  <label for="acompanantes">Cantidad de acompañantes</label>
+                  <input id="acompanantes" name="acompanantes" type="number" min="0" max="10" value="0">
+                </div>
+
+                <div class="full">
+                  <label for="facultad">Facultad</label>
+                  <input list="facultades" name="facultad" id="facultad" placeholder="Selecciona tu facultad">
+                  <datalist id="facultades">
+                    <option value="Ingeniería de Sistemas">
+                    <option value="Ingeniería Civil">
+                    <option value="Ingeniería Industrial">
+                    <option value="Ingeniería Electrónica">
+                    <option value="Ciencias Ambientales">
+                  </datalist>
+                </div>
+
+                <div class="full">
+                  <label for="interes">Nivel de interés</label>
+                  <input id="interes" name="interes" type="range" min="1" max="10" value="7">
+                </div>
+
+                <div class="full">
+                  <label for="comentarios">Comentarios (opcional)</label>
+                  <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Algo que quieras decir?"></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Selección de Evento</legend>
+              <div style="display:flex;gap:10px;flex-wrap:wrap">
+                <label style="display:flex;align-items:center;gap:8px">
+                  <input type="checkbox" name="evt" value="investigacion"> Jornada de Investigación
+                </label>
+                <label style="display:flex;align-items:center;gap:8px">
+                  <input type="checkbox" name="evt" value="feria"> Feria de Emprendimiento
+                </label>
+                <label style="display:flex;align-items:center;gap:8px">
+                  <input type="checkbox" name="evt" value="robotica"> Concurso de Robótica
+                </label>
+                <label style="display:flex;align-items:center;gap:8px">
+                  <input type="checkbox" name="evt" value="festival"> Festival Cultural
+                </label>
+                <label style="display:flex;align-items:center;gap:8px">
+                  <input type="checkbox" name="evt" value="maraton"> Maratón Solidario
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-actions">
+              <button type="submit">Enviar inscripción</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="card" aria-label="Preguntas frecuentes">
+          <h2>Preguntas frecuentes</h2>
+
+          <details>
+            <summary>¿Cómo me registro para un evento?</summary>
+            <div style="padding:10px 6px">
+              <p>Completa el formulario de registro en la sección "Inscríbete". Los campos marcados con * son obligatorios. Tras la inscripción recibirás un correo de confirmación (si configuras backend).</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Hay eventos con costo?</summary>
+            <div style="padding:10px 6px">
+              <p>La mayoría son gratuitos. Los eventos con costo lo indicarán en la descripción y en la confirmación.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>¿Puedo cancelar mi registro?</summary>
+            <div style="padding:10px 6px">
+              <p>Sí — normalmente vía enlace en el correo de confirmación o contactando al organizador.</p>
+            </div>
+          </details>
+        </section>
+
+      </main>
+
+      <!-- ASIDE (sidebar) -->
+      <aside class="card" aria-label="Barra lateral">
+        <div>
+          <div class="aside-title">Eventos Destacados</div>
+          <div style="margin-top:12px;display:flex;flex-direction:column;gap:12px;">
+            <div class="highlight">
+              <div class="mini" role="img" aria-label="mini imagen">
+                <img src="https://utp.ac.pa/sites/default/files/5_5.JPG" width="60px" height="40px" alt="">
+              </div>
+              <div>
+                <strong>Feria de Turismo</strong>
+                <div class="meta" style="font-size:13px">Revive la feria — 23/03/2024</div>
+              </div>
+            </div>
+
+            <div class="highlight">
+              <div class="mini">
+                <img src="https://utp.ac.pa/sites/default/files/foro-innovacion-social-utp6.jpg" width="60px" height="40px" alt="">
+              </div>
+              <div>
+                <strong>Conferencia de Innovación</strong>
+                <div class="meta" style="font-size:13px">75% cupos ocupados</div>
+                <progress value="75" max="100" style="margin-top:6px"></progress>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="aside-title">Síguenos</div>
+          <p style="color:var(--muted);font-size:13px;margin-top:6px">Facebook · Instagram · Twitter · LinkedIn</p>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <a href="#" aria-label="Facebook" style="text-decoration:none;padding:8px;border-radius:8px;background:#eef6ff;color:var(--accent)">FB</a>
+            <a href="#" aria-label="Instagram" style="text-decoration:none;padding:8px;border-radius:8px;background:#fff0f5;color:#d6336c">IG</a>
+            <a href="#" aria-label="Twitter" style="text-decoration:none;padding:8px;border-radius:8px;background:#e8f7ff;color:#1da1f2">TW</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="card">
+      <div>
+        <strong>Universidad Tecnológica de Panamá</strong><br>
+        AV. Universidad, Panamá · Tel: +507 123-4567 · eventos@utp.ac.pa
+      </div>
+      <div style="text-align:right">
+        <small>© Universidad Tecnológica de Panamá — Portal de Eventos · 2024</small>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
