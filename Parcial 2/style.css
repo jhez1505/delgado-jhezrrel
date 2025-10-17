@@ -1,0 +1,179 @@
+body {
+    background-color: #111;
+    color: #ff7b7b;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border: 2px solid #ff7b7b;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    color: #ff7b7b;
+}
+
+.bandera-principal {
+  margin: 20px auto;
+}
+
+.bandera-principal .honduras {
+  width: 400px;
+  height: 220px;
+  border: 2px solid #ff7b7b;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.honduras .franja {
+  flex: 1;
+}
+
+.honduras .azul {
+  background-color: #0073cf;
+}
+
+.honduras .blanca {
+  background-color: white;
+  position: relative;
+}
+
+
+.estrellas {
+  position: absolute;
+  top: 50%;/*aqui era el ajuste del centreado, pongame 100 profe, llegue tarde por las citas medicas de mi mama :(*/
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 15px; 
+}
+
+.estrellas span {
+  width: 18px;
+  height: 18px;
+  background-color: #0073cf;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.bandera-principal p {
+  color: #ff7b7b;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+
+/* ---- Banderas secundarias ---- */
+.banderas-secundarias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bandera {
+    text-align: center;
+}
+
+.bandera > div {
+    width: 150px;
+    height: 90px;
+    border: 2px solid #ff7b7b;
+    margin: auto;
+}
+
+/* ----------- BRASIL ----------- */
+.brasil .verde {
+    background-color: #009739;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.brasil .amarillo {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    width: 70%;
+    height: 60%; 
+    background-color: #ffcc29;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+}
+
+.brasil .azul {
+    width: 45px;
+    height: 35px;
+    background-color: #002776;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    transform: none; 
+}
+
+.banda-blanca {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    border-radius: 20px;
+}
+
+/* ----------- MÉXICO ----------- */
+.mexico {
+    display: flex;
+}
+
+.mexico .franja {
+    flex: 1;
+}
+
+.mexico .verde { background-color: #006847; }
+.mexico .blanca { 
+    background-color: white; 
+    position: relative;
+}
+.mexico .roja { background-color: #ce1126; }
+
+.mexico .emblema {
+    width: 25px;
+    height: 25px;
+    background-color: #007a33;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ----------- NICARAGUA ----------- */
+.nicaragua {
+    display: flex;
+    flex-direction: column;
+}
+
+.nicaragua .franja {
+    flex: 1;
+}
+
+.nicaragua .azul { background-color: #0067c6; }
+.nicaragua .blanca {
+    background-color: white;
+    position: relative;
+}
+
+.emblema-azul {
+    width: 25px;
+    height: 25px;
+    background-color: #0067c6;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
