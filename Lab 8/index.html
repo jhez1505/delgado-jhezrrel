@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Estudiantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-title">
+  <span>📚 Registro de Estudiantes</span>
+  <span class="badge" id="counter">0 estudiantes</span>
+</div>
+
+<div class="card">
+  <div class="form-row">
+    <div class="form-group">
+      <label>Nombre *</label>
+      <input type="text" id="nombre" required />
+    </div>
+    <div class="form-group">
+      <label>Apellido *</label>
+      <input type="text" id="apellido" required />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" id="email" required />
+    </div>
+    <div class="form-group">
+      <label>Edad *</label>
+      <input type="number" id="edad" required />
+    </div>
+    <div class="form-group">
+      <label>Carrera *</label>
+      <select id="carrera" required>
+        <option value="">— Selecciona —</option>
+        <option>Ingeniería de Software</option>
+        <option>Redes</option>
+        <option>Seguridad Informática</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="btn-green" id="btnAgregar">Agregar estudiante</button>
+    <button class="btn-gray" onclick="limpiarFormulario()">Limpiar</button>
+  </div>
+  <small>Los campos marcados con * son obligatorios.</small>
+</div>
+
+<button class="btn-gray" onclick="borrarTodo()">Borrar todo</button>
+
+<div class="card">
+  <h3>Estudiantes</h3>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Edad</th>
+          <th>Carrera</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaEstudiantes">
+        <tr><td colspan="7">No hay resultados</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
